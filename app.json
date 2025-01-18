@@ -1,0 +1,35 @@
+{
+  "target" : "Cloud",
+  "id": "d662d0c1-077b-4cab-aa61-19571f279166",
+  "name": "WanApply",
+  "publisher": "Wanamics",
+  "version": "24.0.0.3",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "Wanamics90x90.png",
+  "dependencies": [
+  ],
+  "platform": "24.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 87470, 
+      "to":   87479
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true, 
+    "allowDownloadingSource": true, 
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile", 
+    "GenerateCaptions"
+  ]
+}

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr-FR" original="WanApply.g.xlf">
+    <body>
+      <group id="body">
+        <trans-unit id="Report 2589381097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Employee Applies-to ID</source>
+          <target>Appliquer ID lettrage salariés</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Employee Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589381097 - ReportDataItem 3247369565 - Method 72583909 - NamedType 2294662597" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to apply %1 "%2" based on %3?</source>
+          <target>Voulez vous appliquer %1 "%2" selon %3 ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Employee Applies-to ID - ReportDataItem Entity - Method OnPreDataItem - NamedType ConfirmMsg</note>
+        </trans-unit>
+        <trans-unit id="Query 2589381097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Employee Applies-to ID</source>
+          <target>Appliquer ID lettrage salarié</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query Apply Employee Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1461985771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Vendor Applies-to ID</source>
+          <target>Appliquer ID lettrage fournisseur</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Vendor Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1461985771 - ReportDataItem 3247369565 - Method 72583909 - NamedType 2294662597" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to apply %1 "%2" based on %3?</source>
+          <target>Voulez vous appliquer %1 "%2" selon %3 ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Vendor Applies-to ID - ReportDataItem Entity - Method OnPreDataItem - NamedType ConfirmMsg</note>
+        </trans-unit>
+        <trans-unit id="Query 1461985771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Vendor Applies-to ID</source>
+          <target>Appliquer ID lettrage fournisseurs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query Apply Vendor Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 952690454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Applies-to ID to Invoices</source>
+          <target>Lettrer les factures par ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Applies-to ID/Cust.Inv. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 952690454 - ReportDataItem 4200712628 - Method 3715240 - NamedType 1248124158" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 "%2" applied.</source>
+          <target>%1 "%2" lettré(s)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Applies-to ID/Cust.Inv. - ReportDataItem InvoiceLedgerEntry - Method OnPostDataItem - NamedType DoneLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 952690454 - ReportDataItem 4200712628 - Method 72583909 - NamedType 2294662597" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to apply %1 "%2" based on %3?</source>
+          <target>Voulez vous appliquer %1 "%2" selon %3 ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Applies-to ID/Cust.Inv. - ReportDataItem InvoiceLedgerEntry - Method OnPreDataItem - NamedType ConfirmMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2766428243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Customer Applies-to ID</source>
+          <target>Appliquer ID lettrage clients</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Customer Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2766428243 - ReportDataItem 3247369565 - Method 72583909 - NamedType 2294662597" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to apply %1 "%2" based on %3?</source>
+          <target>Voulez vous appliquer %1 "%2" selon %3 ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Customer Applies-to ID - ReportDataItem Entity - Method OnPreDataItem - NamedType ConfirmMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2766428243 - Control 3372213351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to ID</source>
+          <target>ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Customer Applies-to ID - Control RequestAppliestoID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 2766428243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Customer Applies-to ID</source>
+          <target>Appliquer ID lettrage clients</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query Apply Customer Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1216842592 - Method 1665861916 - NamedType 3764383116" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to apply Applies-to ID for %1 %2 %3?</source>
+          <target>Voulez-vous lettrer par ID lettrage les écritures du %1 %2 %3 ?</target>
+          <note from="Developer" annotates="general" priority="2">%1:TableCaption, %2:No., %3, Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Apply Cust. Ledger Entries - Method OnRun - NamedType ConfirmLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1216842592 - Method 1665861916 - NamedType 1248124158" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 Applied-to ID applied</source>
+          <target>%1 ID lettrage appliqué(s)</target>
+          <note from="Developer" annotates="general" priority="2">%1:Count Applied</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Apply Cust. Ledger Entries - Method OnRun - NamedType DoneLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2005382159 - Method 1665861916 - NamedType 3764383116" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you confirm transfer of %1 "%2"?</source>
+          <target>Voulez-vous tranférer %1 "%2" ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Transfer Cust. Ledger Entry - Method OnRun - NamedType ConfirmLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2005382159 - Method 1665861916 - NamedType 1248124158" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 "%2" transfered in %3.</source>
+          <target>%1 "%2" transférée(s) en %3.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Transfer Cust. Ledger Entry - Method OnRun - NamedType DoneLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transfer Cust. Ledger Entry</source>
+          <target>Transférer écritures clients</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target>Général</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>Montant</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 949215307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target>N°</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 4224198349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transfer</source>
+          <target>Transférer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control Transfer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 1648763025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Value</source>
+          <target>Nouvelle valeur</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control NewValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 215581208 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the new dimension value code that will link to the items on the journal line.</source>
+          <target>Spécifie le nouveau code section analytique qui lie aux différents éléments de la ligne feuille.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control ShortcutDimension1Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 2826686705 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the new dimension value code that will link to the items on the journal line.</source>
+          <target>Spécifie le nouveau code section analytique qui lie aux différents éléments de la ligne feuille.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control ShortcutDimension2Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 2178957536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Old Value</source>
+          <target>Ancienne valeur</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control OldValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 1014902391 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the dimension value code that the item journal line is linked to.</source>
+          <target>Spécifie le code section analytique qui lie aux différents éléments de la ligne feuille.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control FromEntryGlobalDimension1Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Control 3191976322 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the dimension value code that the item journal line is linked to.</source>
+          <target>Spécifie le code section analytique qui lie aux différents éléments de la ligne feuille.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Control FromEntryGlobalDimension2Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Action 2394532481 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit dimensions, such as area, project, or department, that you can assign to sales and purchase documents to distribute costs and analyze transaction history.</source>
+          <target>Affichez ou modifiez les axes analytiques, tels que la zone, le projet ou le département que vous pouvez affecter aux documents vente et achat afin de distribuer les coûts et analyser l’historique des transactions.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Action NewDimensions - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Action 2394532481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Dimensions</source>
+          <target>Nouvelles imputations</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Action NewDimensions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2520363988 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Applies-to ID Tolerance</source>
+          <target>Proposer tolérance par ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Applies-to ID Tolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2520363988 - Method 737175832 - NamedType 3569966352" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Tolerance %1 %2</source>
+          <target>Ecart de règlement %1 %2</target>
+          <note from="Developer" annotates="general" priority="2">%1:FieldCaption("Applies-to ID"), %2:"Applies-to ID"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Applies-to ID Tolerance - Method InsertGenJournalLine - NamedType DescriptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2520363988 - Method 562636515 - NamedType 3661520395" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal must be empty</source>
+          <target>La feuille doit être vide</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Applies-to ID Tolerance - Method SetGenJournalLine - NamedType JournalMustBeEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Report 2520363988 - ReportDataItem 1994964448 - Method 72583909 - NamedType 3764383116" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do-you want to suggest payment tolerance by "%1" for %2 "%3"?</source>
+          <target>Voulez-vous proposer les écarts de règlement par %1 pour %2 "%3" ?</target>
+          <note from="Developer" annotates="general" priority="2">%1:FieldCaption("Applies-to ID", %2 Count, %3:TableCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Applies-to ID Tolerance - ReportDataItem Customer - Method OnPreDataItem - NamedType ConfirmLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2520363988 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Applies-to ID Tolerance - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2520363988 - Control 4251108013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. Payment Tolerance Amount</source>
+          <target>Montant écart règlement max.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Applies-to ID Tolerance - Control PaymentTolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2500583021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Remaining Amount Tolerance</source>
+          <target>Proposer tolérance montant ouvert</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Remaining Amt. Tolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2500583021 - Method 562636515 - NamedType 3661520395" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal must be empty</source>
+          <target>La feuille doit être vide</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Remaining Amt. Tolerance - Method SetGenJournalLine - NamedType JournalMustBeEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Report 2500583021 - ReportDataItem 1512487356 - Method 72583909 - NamedType 3764383116" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do-you want to suggest payment tolerance by "%1" for %2 "%3"?</source>
+          <target>Voulez-vous proposer les écarts de règlement par %1 pour %2 "%3" ?</target>
+          <note from="Developer" annotates="general" priority="2">%1:FieldCaption("Remaining Amount"), %2:Count, %3:TableCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sugg. Remaining Amt. Tolerance - ReportDataItem CustLedgerEntry - Method OnPreDataItem - NamedType ConfirmLbl</note>
+        </trans-unit>
+        <trans-unit id="Query 298250037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CustAppliedLedgerEntriesAPI</source>
+          <target>CustAppliedLedgerEntriesAPI</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query CustAppliedLedgerEntriesAPI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 515652382 - Control 3160860886 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 515652382">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Apply Customer Entries - Control wanApplyingDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 515652382 - Control 2789406481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 515652382">
+          <source>External Document No.</source>
+          <target>N° doc. externe</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Apply Customer Entries - Control wanApplyingExternalDocumentNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1638686336 - Action 900526957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1638686336">
+          <source>Suggest Applies-to ID Payment Tolerance</source>
+          <target>Proposer écart de règlement par ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Cash Receipt Journal - Action wanSuggestAppliesToIDPaymentTolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1638686336 - Action 209617002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1638686336">
+          <source>Suggest Remaining Amount Payment Tolerance</source>
+          <target>Proposer écart de règlement par montant ouvert</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Cash Receipt Journal - Action wanSuggestCustPaymentTolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393537757 - Action 3016018492 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>Apply Applies-to ID</source>
+          <target>Lettrer par ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Action wanApplyAppliesToID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393537757 - Action 3740513621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>Transfer</source>
+          <target>Transférer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Action wanTransfer - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
