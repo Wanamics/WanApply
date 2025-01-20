@@ -13,6 +13,7 @@ report 87479 "Apply Employee Applies-to ID"
     Caption = 'Apply Employee Applies-to ID';
     UsageCategory = Administration;
     ProcessingOnly = true;
+    Permissions = tabledata Employee = M;
 
     dataset
     {
@@ -31,6 +32,9 @@ report 87479 "Apply Employee Applies-to ID"
                         Entity.Modify(false);
                     end;
                     ApplyLedgerEntryQuery.SetRange(No, Entity."No.");
+                    ApplyLedgerEntryQuery.SetFilter(NoOfEntry, '>1');
+                    if RequestAppliestoID <> '' then
+                        ApplyLedgerEntryQuery.SetRange(AppliestoID, RequestAppliestoID);
                     ApplyLedgerEntryQuery.Open();
                 end;
 
@@ -40,7 +44,9 @@ report 87479 "Apply Employee Applies-to ID"
                         CurrReport.Break()
                     else
                         if ApplyLedgerEntryQuery.RemainingAmount = 0 then
-                            Apply(ApplyLedgerEntryQuery);
+                            ApplyAll(ApplyLedgerEntryQuery)
+                        else if AllowRemainingAmount then
+                            ApplyToInvoice(ApplyLedgerEntryQuery);
                 end;
 
                 trigger OnPostDataItem()
@@ -71,12 +77,29 @@ report 87479 "Apply Employee Applies-to ID"
     requestpage
     {
         SaveValues = true;
+        layout
+        {
+            area(Content)
+            {
+                field(RequestAppliestoID; RequestAppliestoID)
+                {
+                    Caption = 'Applies-to ID';
+                    // ApplicationArea = All;
+                }
+                field(AllowRemainingAmount; AllowRemainingAmount)
+                {
+                    Caption = 'Allow Remaining Amount';
+                }
+            }
+        }
     }
     var
         ApplyLedgerEntryQuery: Query "Apply Employee Applies-to ID";
         GLSetup: Record "General Ledger Setup";
         ProgressDialog: Codeunit "Progress Dialog";
         HoldApplicationMethod: Enum "Application Method";
+        RequestAppliestoID: Code[50];
+        AllowRemainingAmount: Boolean;
 
     trigger OnInitReport()
     var
@@ -95,53 +118,96 @@ report 87479 "Apply Employee Applies-to ID"
             GLSetup."Allow Posting From" := UserSetup."Allow Posting From";
     end;
 
-    local procedure Apply(pQuery: Query "Apply Employee Applies-to ID")
+    local procedure ApplyAll(pQuery: Query "Apply Employee Applies-to ID")
     var
         LedgerEntry: Record "Employee Ledger Entry";
         ApplyUnapplyParameters: Record "Apply Unapply Parameters";
-        VendEntryApplyPostedEntries: Codeunit "EmplEntry-Apply Posted Entries";
         ApplicationDate: Date;
         xLedgerEntry: Record "Employee Ledger Entry";
-        HasDebit, HasCredit : boolean;
     begin
-        LedgerEntry.SetCurrentKey("Employee No.", "Applies-to ID");
-        LedgerEntry.SetRange("Employee No.", pQuery.No);
-        LedgerEntry.SetRange("Applies-to ID", pQuery.AppliestoID);
-        LedgerEntry.SetRange(Open, True);
-        LedgerEntry.SetRange("Currency Code", pQuery.CurrencyCode);
-        LedgerEntry.SetRange("Employee Posting Group", pQuery.PostingGroup);
+        SetFilters(LedgerEntry, pQuery);
         LedgerEntry.SetAutoCalcFields("Remaining Amount");
-
         if LedgerEntry.FindSet() then
             repeat
                 xLedgerEntry := LedgerEntry;
-                // if LedgerEntry."Amount to Apply" = 0 then begin
-                // LedgerEntry.CalcFields("Remaining Amount");
                 LedgerEntry."Amount to Apply" := LedgerEntry."Remaining Amount";
-                // end else
-                //     LedgerEntry."Amount to Apply" := 0;
                 // LedgerEntry."Accepted Payment Tolerance" := 0;
                 // LedgerEntry."Accepted Pmt. Disc. Tolerance" := false;
-                if LedgerEntry."Amount to Apply" <> xLedgerEntry."Amount to Apply" then
-                    Codeunit.Run(Codeunit::"Empl. Entry-Edit", LedgerEntry);
-                if LedgerEntry."Posting Date" > ApplicationDate then
-                    ApplicationDate := LedgerEntry."Posting Date";
-                if LedgerEntry."Remaining Amount" > 0 then
-                    HasDebit := true;
-                if LedgerEntry."Remaining Amount" < 0 then
-                    HasCredit := true;
+                Update(LedgerEntry, xLedgerEntry, ApplicationDate);
+            until LedgerEntry.Next() = 0;
+        Apply(LedgerEntry, ApplicationDate);
+        ;
+    end;
+
+    local procedure ApplyToInvoice(pQuery: Query "Apply Employee Applies-to ID")
+    var
+        LedgerEntry: Record "Employee Ledger Entry";
+        ApplicationDate: Date;
+        xLedgerEntry: Record "Employee Ledger Entry";
+        InvoiceLedgerEntry: Record "Employee Ledger Entry";
+    begin
+        SetFilters(LedgerEntry, pQuery);
+
+        InvoiceLedgerEntry.CopyFilters(LedgerEntry);
+        InvoiceLedgerEntry.SetRange("Document Type", LedgerEntry."Document Type"::Invoice);
+        if InvoiceLedgerEntry.Count <> 1 then
+            exit;
+        InvoiceLedgerEntry.SetAutoCalcFields("Remaining Amount");
+        InvoiceLedgerEntry.FindFirst();
+        InvoiceLedgerEntry."Amount to Apply" := 0;
+        ApplicationDate := InvoiceLedgerEntry."Posting Date";
+
+        LedgerEntry.SetFilter("Entry No.", '<>%1', InvoiceLedgerEntry."Entry No.");
+        LedgerEntry.SetAutoCalcFields("Remaining Amount");
+        if LedgerEntry.FindSet() then
+            repeat
+                xLedgerEntry := LedgerEntry;
+                if Abs(LedgerEntry."Remaining Amount") <= Abs(InvoiceLedgerEntry."Remaining Amount" - InvoiceLedgerEntry."Amount to Apply") then
+                    LedgerEntry."Amount to Apply" := LedgerEntry."Remaining Amount"
+                else
+                    LedgerEntry."Amount to Apply" := -(InvoiceLedgerEntry."Remaining Amount" - InvoiceLedgerEntry."Amount to Apply");
+                InvoiceLedgerEntry."Amount to Apply" -= LedgerEntry."Amount to Apply";
+                Update(LedgerEntry, xLedgerEntry, ApplicationDate);
             until LedgerEntry.Next() = 0;
 
-        if HasDebit and HasCredit then begin
-            ApplyUnapplyParameters.CopyFromEmplLedgEntry(LedgerEntry);
-            ApplyUnapplyParameters."Posting Date" := ApplicationDate;
-            if GLSetup."Journal Templ. Name Mandatory" then begin
-                ApplyUnapplyParameters."Journal Template Name" := GLSetup."Apply Jnl. Template Name";
-                ApplyUnapplyParameters."Journal Batch Name" := GLSetup."Apply Jnl. Batch Name";
-            end;
-            if ApplyUnapplyParameters."Posting Date" < GLSetup."Allow Posting From" then
-                ApplyUnapplyParameters."Posting Date" := GLSetup."Allow Posting From";
-            VendEntryApplyPostedEntries.Apply(LedgerEntry, ApplyUnapplyParameters);
+        LedgerEntry.SetRange("Entry No.");
+        if InvoiceLedgerEntry."Amount to Apply" <> 0 then
+            Apply(LedgerEntry, ApplicationDate);
+    end;
+
+    local procedure SetFilters(var LedgerEntry: Record "Employee Ledger Entry"; pQuery: Query "Apply Employee Applies-to ID")
+    begin
+        LedgerEntry.SetCurrentKey("Employee No.", "Applies-to ID");
+        LedgerEntry.SetRange(Open, True);
+        LedgerEntry.SetRange("Employee No.", pQuery.No);
+        LedgerEntry.SetRange("Applies-to ID", pQuery.AppliestoID);
+        LedgerEntry.SetRange("Currency Code", pQuery.CurrencyCode);
+        LedgerEntry.SetRange("Employee Posting Group", pQuery.PostingGroup);
+    end;
+
+    local procedure Update(var LedgerEntry: Record "Employee Ledger Entry"; xLedgerEntry: Record "Employee Ledger Entry"; var ApplicationDate: Date)
+    begin
+        if (LedgerEntry."Amount to Apply" <> xLedgerEntry."Amount to Apply") /*or
+            (LedgerEntry."Accepted Payment Tolerance" <> xLedgerEntry."Accepted Payment Tolerance") or
+            (LedgerEntry."Accepted Pmt. Disc. Tolerance" <> xLedgerEntry."Accepted Pmt. Disc. Tolerance") */ then
+            Codeunit.Run(Codeunit::"Empl. Entry-Edit", LedgerEntry);
+        if LedgerEntry."Posting Date" > ApplicationDate then
+            ApplicationDate := LedgerEntry."Posting Date";
+    end;
+
+    local procedure Apply(var LedgerEntry: Record "Employee Ledger Entry"; ApplicationDate: Date)
+    var
+        ApplyUnapplyParameters: Record "Apply Unapply Parameters";
+        ApplyPostedEntries: Codeunit "EmplEntry-Apply Posted Entries";
+    begin
+        ApplyUnapplyParameters.CopyFromEmplLedgEntry(LedgerEntry);
+        ApplyUnapplyParameters."Posting Date" := ApplicationDate;
+        if GLSetup."Journal Templ. Name Mandatory" then begin
+            ApplyUnapplyParameters."Journal Template Name" := GLSetup."Apply Jnl. Template Name";
+            ApplyUnapplyParameters."Journal Batch Name" := GLSetup."Apply Jnl. Batch Name";
         end;
+        if ApplyUnapplyParameters."Posting Date" < GLSetup."Allow Posting From" then
+            ApplyUnapplyParameters."Posting Date" := GLSetup."Allow Posting From";
+        ApplyPostedEntries.Apply(LedgerEntry, ApplyUnapplyParameters);
     end;
 }

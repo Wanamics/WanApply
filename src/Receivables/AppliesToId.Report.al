@@ -13,6 +13,7 @@ report 87477 "Apply Customer Applies-to ID"
     Caption = 'Apply Customer Applies-to ID';
     UsageCategory = Administration;
     ProcessingOnly = true;
+    Permissions = tabledata Customer = M;
 
     dataset
     {
@@ -44,7 +45,7 @@ report 87477 "Apply Customer Applies-to ID"
                     else
                         if ApplyLedgerEntryQuery.RemainingAmount = 0 then
                             ApplyAll(ApplyLedgerEntryQuery)
-                        else
+                        else if AllowRemainingAmount then
                             ApplyToInvoice(ApplyLedgerEntryQuery);
                 end;
 
@@ -83,7 +84,11 @@ report 87477 "Apply Customer Applies-to ID"
                 field(RequestAppliestoID; RequestAppliestoID)
                 {
                     Caption = 'Applies-to ID';
-                    ApplicationArea = All;
+                    // ApplicationArea = All;
+                }
+                field(AllowRemainingAmount; AllowRemainingAmount)
+                {
+                    Caption = 'Allow Remaining Amount';
                 }
             }
         }
@@ -94,6 +99,7 @@ report 87477 "Apply Customer Applies-to ID"
         ProgressDialog: Codeunit "Progress Dialog";
         HoldApplicationMethod: Enum "Application Method";
         RequestAppliestoID: Code[50];
+        AllowRemainingAmount: Boolean;
 
     trigger OnInitReport()
     var

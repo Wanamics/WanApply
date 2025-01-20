@@ -33,6 +33,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Apply Vendor Applies-to ID - ReportDataItem Entity - Method OnPreDataItem - NamedType ConfirmMsg</note>
         </trans-unit>
+        <trans-unit id="Report 1461985771 - Control 2957114803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Allow Remaining Amount</source>
+          <target>Autoriser lettrage partiel</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Vendor Applies-to ID - Control AllowRemainingAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1461985771 - Control 3372213351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to ID</source>
+          <target>ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Vendor Applies-to ID - Control RequestAppliestoID - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Query 1461985771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply Vendor Applies-to ID</source>
           <target>Appliquer ID lettrage fournisseurs</target>
@@ -68,6 +80,12 @@
           <target>Voulez vous appliquer %1 "%2" selon %3 ?</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Apply Customer Applies-to ID - ReportDataItem Entity - Method OnPreDataItem - NamedType ConfirmMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2766428243 - Control 2957114803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Allow Remaining Amount</source>
+          <target>Autoriser lettrage partiel</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Customer Applies-to ID - Control AllowRemainingAmount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2766428243 - Control 3372213351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Applies-to ID</source>
