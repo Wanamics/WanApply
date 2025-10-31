@@ -78,7 +78,17 @@ Codeunit 87471 "Transfer Cust. Ledger Entry"
                         pRec.TestField("Applies-to ID");
                         lGenJournalLine."Applies-to ID" := AppliesToId;
                 end;
+
+                case pRec."Document Type" of
+                    pRec."Document Type"::Invoice:
+                        lGenJournalLine.Validate("Document Type", lGenJournalLine."Document Type"::"Credit Memo");
+                    pRec."Document Type"::"Credit Memo":
+                        lGenJournalLine.Validate("Document Type", lGenJournalLine."Document Type"::Invoice);
+                end;
+                if pRec."Document Type" in [pRec."Document Type"::Invoice, pRec."Document Type"::"Credit Memo"] then
+                    Append(lGenJournalLine."Document No.", '_');
                 lGenJournalLine.Validate("Amount", -pRec.Amount);
+                lGenJournalLine."Sales/Purch. (LCY)" := -pRec."Sales (LCY)";
                 Append(lGenJournalLine.Description, '-');
                 GenJnlPostLine.Run(lGenJournalLine);
 
@@ -104,7 +114,11 @@ Codeunit 87471 "Transfer Cust. Ledger Entry"
                     lGenJournalLine.Validate("Shortcut Dimension 2 Code", pTempGenJournalLine."Shortcut Dimension 2 Code")
                 else
                     lGenJournalLine.Validate("Shortcut Dimension 2 Code", pRec."Global Dimension 2 Code");
+                lGenJournalLine.Validate("Document Type", pRec."Document Type");
                 lGenJournalLine.Validate("Amount", pRec.Amount);
+                lGenJournalLine."Sales/Purch. (LCY)" := pRec."Sales (LCY)";
+                if pRec."Document Type" in [pRec."Document Type"::Invoice, pRec."Document Type"::"Credit Memo"] then
+                    Append(lGenJournalLine."Document No.", '_');
                 Append(lGenJournalLine.Description, '+');
                 lGenJournalLine."Applies-to ID" := AppliesToID;
                 GenJnlPostLine.Run(lGenJournalLine);
@@ -122,7 +136,8 @@ Codeunit 87471 "Transfer Cust. Ledger Entry"
         pGenJournalLine."Document No." := pRec."Document No.";
         pGenJournalLine.Validate("Account Type", pGenJournalLine."Account Type"::"Customer");
         pGenJournalLine.Validate("Account No.", pRec."Customer No.");
-        pGenJournalLine.Amount := pRec.Amount;
+        // pGenJournalLine.Validate("Document Type", pRec."Document Type");
+        // pGenJournalLine.Amount := pRec.Amount;
         pGenJournalLine.Description := pRec.Description;
         pGenJournalLine."Document Date" := pRec."Document Date";
         pGenJournalLine."Due Date" := pRec."Due Date";
@@ -131,12 +146,22 @@ Codeunit 87471 "Transfer Cust. Ledger Entry"
         pGenJournalLine."Shortcut Dimension 1 Code" := pRec."Global Dimension 1 Code";
         pGenJournalLine."Shortcut Dimension 2 Code" := pRec."Global Dimension 2 Code";
         pGenJournalLine."Dimension Set ID" := pRec."Dimension Set ID";
+        pGenJournalLine."Salespers./Purch. Code" := pRec."Salesperson Code";
     end;
 
     local procedure Append(var pDescription: Text; pAppend: Text)
     begin
         if StrLen(pDescription) + 1 + StrLen(pAppend) > MaxStrLen(pDescription) then
             pDescription := pDescription.Substring(1, MaxStrLen(pDescription) - StrLen(pAppend) - 1);
-        pDescription += ' ' + pAppend;
+        pDescription += /*' ' +*/ pAppend;
+    end;
+
+    local procedure Append(var pCode: Code[20]; pAppend: Text)
+    var
+        Text20: Text[20];
+    begin
+        Text20 := pCode;
+        Append(Text20, pAppend);
+        pCode := Text20;
     end;
 }

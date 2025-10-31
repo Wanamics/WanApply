@@ -76,6 +76,7 @@ report 87479 "Apply Employee Applies-to ID"
     }
     requestpage
     {
+
         SaveValues = true;
         layout
         {
@@ -84,11 +85,12 @@ report 87479 "Apply Employee Applies-to ID"
                 field(RequestAppliestoID; RequestAppliestoID)
                 {
                     Caption = 'Applies-to ID';
-                    // ApplicationArea = All;
+                    ApplicationArea = All;
                 }
                 field(AllowRemainingAmount; AllowRemainingAmount)
                 {
                     Caption = 'Allow Remaining Amount';
+                    ApplicationArea = All;
                 }
             }
         }

@@ -48,6 +48,21 @@ pageextension 87472 "Customer Ledger Entries" extends "Customer Ledger Entries"
                     Codeunit.Run(Codeunit::"Apply Cust. Ledger Entries", Customer);
                 end;
             }
+            action(wanCloseAsLost)
+            {
+                Caption = 'Close as Lost';
+                Ellipsis = true;
+                Image = GainLossEntries;
+                ApplicationArea = All;
+                trigger OnAction()
+                var
+                    lRec: Record "Cust. Ledger Entry";
+                begin
+                    lRec.Copy(Rec);
+                    CurrPage.SetSelectionFilter(lRec);
+                    Codeunit.Run(Codeunit::"Close as Lost", lRec);
+                end;
+            }
         }
     }
 }

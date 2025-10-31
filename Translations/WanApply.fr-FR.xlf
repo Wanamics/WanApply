@@ -3,6 +3,18 @@
   <file datatype="xml" source-language="en-US" target-language="fr-FR" original="WanApply.g.xlf">
     <body>
       <group id="body">
+        <trans-unit id="PageExtension 2393537757 - Control 2872765637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>Applied-to Code</source>
+          <target>Code lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension wan Customer Ledger Entries - Control AppliedToCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3485660885 - Control 2872765637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
+          <source>Applied-to Code</source>
+          <target>Code lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension wan Vendor Ledger Entries - Control AppliedToCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2589381097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply Employee Applies-to ID</source>
           <target>Appliquer ID lettrage salariés</target>
@@ -14,6 +26,18 @@
           <target>Voulez vous appliquer %1 "%2" selon %3 ?</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Apply Employee Applies-to ID - ReportDataItem Entity - Method OnPreDataItem - NamedType ConfirmMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2589381097 - Control 2957114803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Allow Remaining Amount</source>
+          <target>Autoriser lettrage partiel</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Employee Applies-to ID - Control AllowRemainingAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589381097 - Control 3372213351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to ID</source>
+          <target>ID lettrage</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Apply Employee Applies-to ID - Control RequestAppliestoID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 2589381097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply Employee Applies-to ID</source>
@@ -50,6 +74,12 @@
           <target>Appliquer ID lettrage fournisseurs</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Query Apply Vendor Applies-to ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 341024541 - Method 425793213 - NamedType 3577229803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You are not allowed to apply and post an entry to an entry with an earlier posting date.\\Instead, post %1 %2 and then apply it to %3 %4.\%5 %6.</source>
+          <target>Vous n'être pas autorisés à lettrer et à enregistrer une écriture avec une écriture antérieure.\\Enregistrer plutôt %1 %2 puis lettrez le à posteriori (%3 %4).\%5 %6.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit WanApply Posting Events - Method OnBeforeCheckIfPostingDateIsEarlier - NamedType Text015</note>
         </trans-unit>
         <trans-unit id="Report 952690454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply Applies-to ID to Invoices</source>
@@ -111,6 +141,24 @@
           <note from="Developer" annotates="general" priority="2">%1:Count Applied</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Apply Cust. Ledger Entries - Method OnRun - NamedType DoneLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4149740740 - Method 1056339342 - NamedType 3594301179" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 "%2" are already closed</source>
+          <target>%1 "%2" sont déjà clôturées</target>
+          <note from="Developer" annotates="general" priority="2">%1:Count, %2:TableCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Close as Lost - Method CheckEntry - NamedType AlreadyClosedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4149740740 - Method 1665861916 - NamedType 3764383116" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to close %1 "%2" as lost on %3?</source>
+          <target>Voulez-vous clôturer %1 "%2" par pertes &amp; profits au %3 ?</target>
+          <note from="Developer" annotates="general" priority="2">%1:Count, %2:TableCaption, %3:PostingDate</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Close as Lost - Method OnRun - NamedType ConfirmLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4149740740 - Method 1665861916 - NamedType 1248124158" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 "%2" closed as lost in %3.</source>
+          <target>%1 "%2" clôturées en %3.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Close as Lost - Method OnRun - NamedType DoneLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2005382159 - Method 1665861916 - NamedType 3764383116" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you confirm transfer of %1 "%2"?</source>
           <target>Voulez-vous tranférer %1 "%2" ?</target>
@@ -128,6 +176,18 @@
           <target>Transférer écritures clients</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Method 2638881531 - NamedType 2300139140" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WARNING: %1 and %2 should be reversed by the opossite "%3".</source>
+          <target>ATTENTION : %1 et %2 devraient être annulés par un document "%3" inverse.</target>
+          <note from="Developer" annotates="general" priority="2">%1: DocumentType::Invoice, %2: DocumentType::"Credit Memo", %3: FieldCaption("Document Type");</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Method CheckDocumentType - NamedType WarningLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2005382159 - Method 2638881531 - NamedType 348515413" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to Continue?</source>
+          <target>Voulez-vous continuer ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Transfer Cust. Ledger Entry - Method CheckDocumentType - NamedType ContinueLbl</note>
         </trans-unit>
         <trans-unit id="Page 2005382159 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
@@ -297,11 +357,53 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Action wanApplyAppliesToID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2393537757 - Action 1198909884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>Close as Lost</source>
+          <target>Clôturer par P &amp; P</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Action wanCloseAsLost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2393537757 - Action 3740513621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
           <source>Transfer</source>
           <target>Transférer</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Action wanTransfer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3274904948 - Control 228936420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2866362260">
+          <source>Specifies the value of the Close Entry Credit field.</source>
+          <target>Spécifies le compte de validation des pertes.</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension wan Customer Posting Groups - Control wan Close Entry Credit Acc. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3274904948 - Control 405089845 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2866362260">
+          <source>Specifies the value of the Close Entry Debit Acc. field.</source>
+          <target>Spécifies le compte de validation des profits</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension wan Customer Posting Groups - Control wan Close Entry Debit Acc. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3377129821 - Field 228936420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+          <source>Specifies the general ledger account to use when you close an entry as lost.</source>
+          <target>Spécifies le compte de validation lorque vous clôturez une écritures en P &amp; P</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Credit Acc. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3377129821 - Field 228936420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+          <source>Close Entry Credit</source>
+          <target>Compte clôture P &amp; P crédit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Credit Acc. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3377129821 - Field 405089845 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+          <source>Specifies the general ledger account to use when you close an entry as lost.</source>
+          <target>Spécifies le compte de validation lorque vous clôturez une écritures en P &amp; P</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Debit Acc. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3377129821 - Field 405089845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+          <source>Close Entry Debit Acc.</source>
+          <target>Compte clôture P &amp; P débit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Debit Acc. - Property Caption</note>
         </trans-unit>
       </group>
     </body>

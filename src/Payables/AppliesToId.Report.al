@@ -84,11 +84,12 @@ report 87478 "Apply Vendor Applies-to ID"
                 field(RequestAppliestoID; RequestAppliestoID)
                 {
                     Caption = 'Applies-to ID';
-                    // ApplicationArea = All;
+                    ApplicationArea = All;
                 }
                 field(AllowRemainingAmount; AllowRemainingAmount)
                 {
                     Caption = 'Allow Remaining Amount';
+                    ApplicationArea = All;
                 }
             }
         }

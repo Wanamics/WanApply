@@ -280,6 +280,8 @@ Page 87470 "Transfer Cust. Ledger Entry"
 
     procedure SetFromEntry(pFromEntry: Record "Cust. Ledger Entry")
     begin
+        if not CheckDocumentType(pFromEntry) then
+            Error('');
         FromEntry := pFromEntry;
         Rec."Document No." := FromEntry."Document No.";
         // Rec."Posting Date" := FromEntry."Posting Date";
@@ -300,5 +302,16 @@ Page 87470 "Transfer Cust. Ledger Entry"
             Dummy."Shortcut Dimension 2 Code",
             Rec."Shortcut Dimension 1 Code",
             Rec."Shortcut Dimension 2 Code");
+    end;
+
+    local procedure CheckDocumentType(var pRec: Record "Cust. Ledger Entry"): Boolean
+    var
+        WarningLbl: Label 'WARNING: %1 and %2 should be reversed by the opossite "%3".', Comment = '%1: DocumentType::Invoice, %2: DocumentType::"Credit Memo", %3: FieldCaption("Document Type");';
+        ContinueLbl: Label 'Do you want to Continue?';
+    begin
+        if not (pRec."Document Type" in [pRec."Document Type"::Invoice, pRec."Document Type"::"Credit Memo"]) then
+            exit(true)
+        else
+            exit(Confirm(WarningLbl + '\' + ContinueLbl, false, "Gen. Journal Document Type"::Invoice, "Gen. Journal Document Type"::"Credit Memo", pRec.FieldCaption("Document Type")));
     end;
 }
