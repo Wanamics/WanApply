@@ -12,5 +12,5 @@ reportextension 87474 "wan Customer - Balance to Date" extends "Customer - Balan
         }
     }
     var
-        AppliedHelper: Codeunit "wan Applied Entries Helper";
+        AppliedHelper: Codeunit "Applied Entries Helper";
 }

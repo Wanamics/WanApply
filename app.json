@@ -3,7 +3,7 @@
   "id": "d662d0c1-077b-4cab-aa61-19571f279166",
   "name": "WanApply",
   "publisher": "Wanamics",
-  "version": "24.0.0.11",
+  "version": "27.0.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -26,10 +26,11 @@
     "allowDownloadingSource": true, 
     "includeSourceInSymbolFile": true
   },
-  "runtime": "13.0",
+  "runtime": "16.0",
   "features": [
     "NoImplicitWith",
     "TranslationFile", 
     "GenerateCaptions"
-  ]
+  ],
+  "contextSensitiveHelpUrl": "https://github.com/Wanamics/WanApply/blob/main/README.md"
 }

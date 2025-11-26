@@ -2,16 +2,20 @@ namespace Wanamics.Apply;
 
 using Microsoft.Sales.Receivables;
 using Microsoft.Sales.Customer;
+using Wanamics.Apply.AppliedEntries;
 pageextension 87472 "Customer Ledger Entries" extends "Customer Ledger Entries"
 {
     layout
     {
         addlast(Control1)
         {
-            field("Applies-to ID"; Rec."Applies-to ID")
+            field(AppliedToCode; AppliedEntriesHelper.AppliedToCode(Rec."Entry No.", Rec.Open, Rec."Closed by Entry No."))
             {
-                Editable = true;
+                Caption = 'Applied-to Code';
+                Width = 6;
+                Editable = false;
                 ApplicationArea = All;
+                Visible = false;
             }
         }
     }
@@ -65,4 +69,6 @@ pageextension 87472 "Customer Ledger Entries" extends "Customer Ledger Entries"
             }
         }
     }
+    var
+        AppliedEntriesHelper: Codeunit "Applied Entries Helper";
 }

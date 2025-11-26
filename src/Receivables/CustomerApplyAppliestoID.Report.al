@@ -1,23 +1,23 @@
-namespace Wanamics.Apply.Payables;
+namespace Wanamics.Apply.Receivables;
 
-using Microsoft.Purchases.Vendor;
+using Microsoft.Sales.Customer;
 using System.Utilities;
-using Microsoft.Purchases.Payables;
+using Microsoft.Sales.Receivables;
 using Microsoft.Finance.GeneralLedger.Setup;
 using Microsoft.Utilities;
 using Microsoft.Finance.ReceivablesPayables;
 using System.Security.User;
-report 87478 "Apply Vendor Applies-to ID"
+report 87477 "Customer Apply Applies-to ID"
 {
     ApplicationArea = All;
-    Caption = 'Apply Vendor Applies-to ID';
+    Caption = 'Apply Customer Applies-to ID';
     UsageCategory = Administration;
     ProcessingOnly = true;
-    Permissions = tabledata Vendor = M;
+    Permissions = tabledata Customer = M;
 
     dataset
     {
-        dataitem(Entity; Vendor)
+        dataitem(Entity; Customer)
         {
             RequestFilterFields = "No.";
 
@@ -60,7 +60,7 @@ report 87478 "Apply Vendor Applies-to ID"
             trigger OnPreDataItem()
             var
                 ConfirmMsg: Label 'Do you want to apply %1 "%2" based on %3?';
-                CustVendLedgerEntry: Record "Vendor Ledger Entry";
+                CustVendLedgerEntry: Record "Cust. Ledger Entry";
             begin
                 if CurrReport.UseRequestPage then
                     if not Confirm(ConfirmMsg, false, Count(), TableCaption(), CustVendLedgerEntry.FieldCaption("Applies-to ID")) then
@@ -95,7 +95,7 @@ report 87478 "Apply Vendor Applies-to ID"
         }
     }
     var
-        ApplyLedgerEntryQuery: Query "Apply Vendor Applies-to ID";
+        ApplyLedgerEntryQuery: Query "Customer Apply Applies-to ID";
         GLSetup: Record "General Ledger Setup";
         ProgressDialog: Codeunit "Progress Dialog";
         HoldApplicationMethod: Enum "Application Method";
@@ -119,12 +119,11 @@ report 87478 "Apply Vendor Applies-to ID"
             GLSetup."Allow Posting From" := UserSetup."Allow Posting From";
     end;
 
-    local procedure ApplyAll(pQuery: Query "Apply Vendor Applies-to ID")
+    local procedure ApplyAll(pQuery: Query "Customer Apply Applies-to ID")
     var
-        LedgerEntry: Record "Vendor Ledger Entry";
-        ApplyUnapplyParameters: Record "Apply Unapply Parameters";
+        LedgerEntry: Record "Cust. Ledger Entry";
         ApplicationDate: Date;
-        xLedgerEntry: Record "Vendor Ledger Entry";
+        xLedgerEntry: Record "Cust. Ledger Entry";
     begin
         SetFilters(LedgerEntry, pQuery);
         LedgerEntry.SetAutoCalcFields("Remaining Amount");
@@ -140,12 +139,12 @@ report 87478 "Apply Vendor Applies-to ID"
         ;
     end;
 
-    local procedure ApplyToInvoice(pQuery: Query "Apply Vendor Applies-to ID")
+    local procedure ApplyToInvoice(pQuery: Query "Customer Apply Applies-to ID")
     var
-        LedgerEntry: Record "Vendor Ledger Entry";
+        LedgerEntry: Record "Cust. Ledger Entry";
         ApplicationDate: Date;
-        xLedgerEntry: Record "Vendor Ledger Entry";
-        InvoiceLedgerEntry: Record "Vendor Ledger Entry";
+        xLedgerEntry: Record "Cust. Ledger Entry";
+        InvoiceLedgerEntry: Record "Cust. Ledger Entry";
     begin
         SetFilters(LedgerEntry, pQuery);
 
@@ -176,32 +175,32 @@ report 87478 "Apply Vendor Applies-to ID"
             Apply(LedgerEntry, ApplicationDate);
     end;
 
-    local procedure SetFilters(var LedgerEntry: Record "Vendor Ledger Entry"; pQuery: Query "Apply Vendor Applies-to ID")
+    local procedure SetFilters(var LedgerEntry: Record "Cust. Ledger Entry"; pQuery: Query "Customer Apply Applies-to ID")
     begin
-        LedgerEntry.SetCurrentKey("Vendor No.", "Applies-to ID");
+        LedgerEntry.SetCurrentKey("Customer No.", "Applies-to ID");
         LedgerEntry.SetRange(Open, True);
-        LedgerEntry.SetRange("Vendor No.", pQuery.No);
+        LedgerEntry.SetRange("Customer No.", pQuery.No);
         LedgerEntry.SetRange("Applies-to ID", pQuery.AppliestoID);
         LedgerEntry.SetRange("Currency Code", pQuery.CurrencyCode);
-        LedgerEntry.SetRange("Vendor Posting Group", pQuery.PostingGroup);
+        LedgerEntry.SetRange("Customer Posting Group", pQuery.PostingGroup);
     end;
 
-    local procedure Update(var LedgerEntry: Record "Vendor Ledger Entry"; xLedgerEntry: Record "Vendor Ledger Entry"; var ApplicationDate: Date)
+    local procedure Update(var LedgerEntry: Record "Cust. Ledger Entry"; xLedgerEntry: Record "Cust. Ledger Entry"; var ApplicationDate: Date)
     begin
         if (LedgerEntry."Amount to Apply" <> xLedgerEntry."Amount to Apply") or
             (LedgerEntry."Accepted Payment Tolerance" <> xLedgerEntry."Accepted Payment Tolerance") or
             (LedgerEntry."Accepted Pmt. Disc. Tolerance" <> xLedgerEntry."Accepted Pmt. Disc. Tolerance") then
-            Codeunit.Run(Codeunit::"Vend. Entry-Edit", LedgerEntry);
+            Codeunit.Run(Codeunit::"Cust. Entry-Edit", LedgerEntry);
         if LedgerEntry."Posting Date" > ApplicationDate then
             ApplicationDate := LedgerEntry."Posting Date";
     end;
 
-    local procedure Apply(var LedgerEntry: Record "Vendor Ledger Entry"; ApplicationDate: Date)
+    local procedure Apply(var LedgerEntry: Record "Cust. Ledger Entry"; ApplicationDate: Date)
     var
         ApplyUnapplyParameters: Record "Apply Unapply Parameters";
-        ApplyPostedEntries: Codeunit "VendEntry-Apply Posted Entries";
+        CustEntryApplyPostedEntries: Codeunit "CustEntry-Apply Posted Entries";
     begin
-        ApplyUnapplyParameters.CopyFromVendLedgEntry(LedgerEntry);
+        ApplyUnapplyParameters.CopyFromCustLedgEntry(LedgerEntry);
         ApplyUnapplyParameters."Posting Date" := ApplicationDate;
         if GLSetup."Journal Templ. Name Mandatory" then begin
             ApplyUnapplyParameters."Journal Template Name" := GLSetup."Apply Jnl. Template Name";
@@ -209,6 +208,7 @@ report 87478 "Apply Vendor Applies-to ID"
         end;
         if ApplyUnapplyParameters."Posting Date" < GLSetup."Allow Posting From" then
             ApplyUnapplyParameters."Posting Date" := GLSetup."Allow Posting From";
-        ApplyPostedEntries.Apply(LedgerEntry, ApplyUnapplyParameters);
+        CustEntryApplyPostedEntries.Apply(LedgerEntry, ApplyUnapplyParameters);
     end;
+
 }

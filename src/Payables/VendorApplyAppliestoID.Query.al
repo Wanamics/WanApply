@@ -1,7 +1,7 @@
 namespace Wanamics.Apply.Payables;
 
 using Microsoft.Purchases.Payables;
-query 87478 "Apply Vendor Applies-to ID"
+query 87478 "Vendor Apply Applies-to ID"
 {
     Caption = 'Apply Vendor Applies-to ID';
     QueryType = Normal;

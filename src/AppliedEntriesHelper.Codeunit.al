@@ -1,6 +1,6 @@
 namespace Wanamics.Apply.AppliedEntries;
 
-codeunit 87475 "wan Applied Entries Helper"
+codeunit 87475 "Applied Entries Helper"
 {
     procedure AppliedToCode(pEntryNo: Integer; pOpen: Boolean; pClosedByEntryNo: Integer): Text
     begin

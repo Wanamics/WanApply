@@ -1,7 +1,7 @@
 namespace Wanamics.Apply.Receivables;
 
 using Microsoft.Sales.Receivables;
-query 87477 "Apply Customer Applies-to ID"
+query 87477 "Customer Apply Applies-to ID"
 {
     Caption = 'Apply Customer Applies-to ID';
     QueryType = Normal;
@@ -29,12 +29,12 @@ query 87477 "Apply Customer Applies-to ID"
             }
         }
     }
-    procedure GetRemainingAmount(pCustLedgerEntry: Record "Cust. Ledger Entry"): Decimal
+    procedure GetRemainingAmount(pEntry: Record "Cust. Ledger Entry"): Decimal
     begin
-        SetRange(No, pCustLedgerEntry."Customer No.");
-        SetRange(AppliestoID, pCustLedgerEntry."Applies-to ID");
-        SetRange(CurrencyCode, pCustLedgerEntry."Currency Code");
-        SetRange(PostingGroup, pCustLedgerEntry."Customer Posting Group");
+        SetRange(No, pEntry."Customer No.");
+        SetRange(AppliestoID, pEntry."Applies-to ID");
+        SetRange(CurrencyCode, pEntry."Currency Code");
+        SetRange(PostingGroup, pEntry."Customer Posting Group");
         Open();
         if Read() then
             exit(RemainingAmount);

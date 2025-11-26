@@ -12,5 +12,5 @@ reportextension 87475 "wan Vendor - Balance to Date " extends "Vendor - Balance 
         }
     }
     var
-        AppliedHelper: Codeunit "wan Applied Entries Helper";
+        AppliedHelper: Codeunit "Applied Entries Helper";
 }

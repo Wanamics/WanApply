@@ -1,7 +1,7 @@
 namespace Wanamics.Apply.AppliedEntries;
 
 using Microsoft.Purchases.Payables;
-pageextension 87475 "wan Vendor Ledger Entries" extends "Vendor Ledger Entries"
+pageextension 87475 "Vendor Ledger Entries" extends "Vendor Ledger Entries"
 {
     layout
     {
@@ -18,5 +18,5 @@ pageextension 87475 "wan Vendor Ledger Entries" extends "Vendor Ledger Entries"
         }
     }
     var
-        AppliedEntriesHelper: Codeunit "wan Applied Entries Helper";
+        AppliedEntriesHelper: Codeunit "Applied Entries Helper";
 }

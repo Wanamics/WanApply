@@ -1,7 +1,7 @@
 namespace Wanamics.Apply.HRPayables;
 
 using Microsoft.HumanResources.Payables;
-query 87479 "Apply Employee Applies-to ID"
+query 87479 "Employee Apply Applies-to ID"
 {
     Caption = 'Apply Employee Applies-to ID';
     QueryType = Normal;
