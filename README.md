@@ -1,9 +1,11 @@
 # Extension WanApply<!-- omit in toc -->
 
-Les anglophones "appliquent" (to Apply) des écritures les unes aux autres.  
+Les anglophones *appliquent* (to Apply) des écritures les unes aux autres.  
 La traduction de Business Central a retenu **Lettrage** dont l'éthimologie est ici paradoxale (voir [Code lettrage... enfin - Wanamics](https://www.wanamics.fr/code-lettrage-enfin)).
 
-Cette extension complète les fonctions standards de lettrage des écritures clients, écritures fournisseurs et écritures salariés.  
+Cette extension complète les fonctions standards de lettrage des écritures clients, écritures fournisseurs et écritures salariés.
+
+![Lettrage](docs/assets/README.png)
 
 > Ce n’est que l’une des extensions gracieusement mises à votre disposition (voir [Extensions - Wanamics](https://www.wanamics.fr/extensions-business-central/Extensions)).  
 Vous pouvez donc en disposer librement dans le cadre de la licence open source qui vous est accordée (voir [Licence Open Source - Wanamics](https://www.wanamics.fr/licence-open-source/)).
