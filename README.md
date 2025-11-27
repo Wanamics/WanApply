@@ -1,4 +1,4 @@
-# Extension WanApply   <!-- omit in toc -->
+# Extension WanApply<!-- omit in toc -->
 
 Les anglophones "appliquent" (to Apply) des écritures les unes aux autres.  
 La traduction de Business Central a retenu **Lettrage** dont l'éthimologie est ici paradoxale (voir [Code lettrage... enfin - Wanamics](https://www.wanamics.fr/code-lettrage-enfin)).
@@ -87,4 +87,4 @@ Permet aux application tierces (ex : e-commerce, facturation extene...) d'être 
 
 ## Outils d'administration
 * ?Report=87476 "Apply Applies-to ID/Cust.Inv."\
-Recherche pour chaque **Ecriture client** de la sélection dont **ID lettrage** est non vide, les écritures de même **ID lettrage** à lettrer, même partiellement.
+Recherche pour chaque **Ecriture client** de la sélection débritrice dont **ID lettrage** est non vide, les écritures de même **ID lettrage** à lettrer, même partiellement.
