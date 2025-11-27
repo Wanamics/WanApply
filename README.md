@@ -1,6 +1,7 @@
-# Extension WanApply <!-- omit in toc -->
+# Extension WanApply   <!-- omit in toc -->
 
-Les anglophones ne parlent pas de lettrage mais d'appliquer (to Apply) des écritures les unes aux autres. La traduction de Business Central a retenu **Lettrage** dont l'éthimologie est ici paradoxale (voir [Code lettrage... enfin - Wanamics](https://www.wanamics.fr/code-lettrage-enfin)).
+Les anglophones "appliquent" (to Apply) des écritures les unes aux autres.  
+La traduction de Business Central a retenu **Lettrage** dont l'éthimologie est ici paradoxale (voir [Code lettrage... enfin - Wanamics](https://www.wanamics.fr/code-lettrage-enfin)).
 
 Cette extension complète les fonctions standards de lettrage des
 écritures clients,  écritures fournisseurs et écritures salariés.  
@@ -60,8 +61,6 @@ Le **N° compte contrepartie** reprend le Compte écart règlement associé au *
 * **Proposer écarts de règlement par ID lettrage**\
 Propose de solder et lettrer les écritures de même de même **ID lettrage**, **Code devise** et **Groupe compta** dont le montant ouvert est inférieur au montant indiqué (le **Montant écart règlement max.** défini en **Paramètres comptabilité** est proposé).  
 Le **N° compte contrepartie** reprend le Compte écart règlement associé au **Groupe compta client**.
-
-
 
 ## Traitements Appliquer ID Lettrage...
 Ce traitement peut concerner les clients, les fournisseurs ou les salariés.
