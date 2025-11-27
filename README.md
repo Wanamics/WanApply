@@ -79,11 +79,11 @@ Pour mémoire, la syntaxe d'un endpoint est la suivante :
 ### custAppliedLedgerEntries
 Permet aux application tierces (ex : e-commerce, facturation extene...) d'être informé du règlement des factures.
 ``` 
-    APIGroup = 'wanApply';
     APIPublisher = 'Wanamics';
+    APIGroup = 'wanApply';
     APIVersion = 'v1.0';
-    EntityName = 'custAppliedLedgerEntry';
     EntitySetName = 'custAppliedLedgerEntries';
+    EntityName = 'custAppliedLedgerEntry';
 ````
 
 ## Outils d'administration

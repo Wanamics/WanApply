@@ -85,7 +85,7 @@
         </trans-unit>
         <trans-unit id="Report 952690454 - ReportDataItem 4200712628 - Method 72583909 - NamedType 2294662597" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to apply %1 "%2" based on %3?</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1:Count, %2:TableCaption, %3:FieldCaption("Applies-to ID"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Apply Applies-to ID/Cust.Inv. - ReportDataItem InvoiceLedgerEntry - Method OnPreDataItem - NamedType ConfirmMsg</note>
         </trans-unit>
         <trans-unit id="Report 2444234291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

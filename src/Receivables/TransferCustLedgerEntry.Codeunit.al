@@ -17,6 +17,7 @@ Codeunit 87471 "Transfer Cust. Ledger Entry"
         lCount: Integer;
         StartDateTime: DateTime;
     begin
+        Rec.SetAutoCalcFields(Amount, "Remaining Amount", "Original Amount");
         CheckEntry(Rec);
         TransferCustLedgerEntry.SetFromEntry(Rec);
         TransferCustLedgerEntry.LookupMode(true);
@@ -40,7 +41,7 @@ Codeunit 87471 "Transfer Cust. Ledger Entry"
     begin
         pRec.TestField(pRec.Open, true);
         pRec.TestField(pRec.Reversed, false);
-        pRec.CalcFields("Remaining Amount");
+        // pRec.CalcFields("Remaining Amount");
         pRec.TestField("Remaining Amount", pRec."Original Amount");
         VATEntry.SetCurrentKey("Document No.", "Posting Date");
         VATEntry.SetRange("Document No.", pRec."Document No.");
