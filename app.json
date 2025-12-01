@@ -3,7 +3,7 @@
   "id": "d662d0c1-077b-4cab-aa61-19571f279166",
   "name": "WanApply",
   "publisher": "Wanamics",
-  "version": "27.0.0.2",
+  "version": "27.0.0.3",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -11,6 +11,7 @@
   "help": "",
   "url": "",
   "logo": "Wanamics90x90.png",
+  "contextSensitiveHelpUrl": "https://github.com/Wanamics/WanApply?tab=readme-ov-file#extension-wanapply", 
   "dependencies": [
   ],
   "platform": "24.0.0.0",
@@ -31,6 +32,5 @@
     "NoImplicitWith",
     "TranslationFile", 
     "GenerateCaptions"
-  ],
-  "contextSensitiveHelpUrl": "https://www.wanamics.fr/extension-wanapply"
+  ]
 }

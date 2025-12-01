@@ -7,15 +7,12 @@ Cette extension complète les fonctions standards de lettrage des écritures cli
 
 ![Lettrage](images/WanApply.png)
 
-> Ce n’est que l’une des extensions gracieusement mises à votre disposition (voir [Extensions | Wanamics](https://www.wanamics.fr/extensions-business-central/Extensions)).  
-Vous pouvez donc en disposer librement dans le cadre de la licence open source qui vous est accordée (voir [Licence Open Source | Wanamics](https://www.wanamics.fr/licence-open-source/)).
-
 Voir aussi :
 * [Lettrage à posteriori | Wanamics](https://www.wanamics.fr/lettrage-a-posteriori/)
 
 * [Paiement à la commande et lettrage | Wanamics](https://www.wanamics.fr/paiement-a-la-commande-et-lettrage/)
 
-### Sommaire 
+**Sommaire** 
 - [Écritures comptables clients, fournisseurs et salariés](#écritures-comptables-clients-fournisseurs-et-salariés)
 - [Écritures comptables clients](#écritures-comptables-clients)
   - [Colonnes](#colonnes)
