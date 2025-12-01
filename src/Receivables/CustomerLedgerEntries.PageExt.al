@@ -7,6 +7,15 @@ pageextension 87472 "Customer Ledger Entries" extends "Customer Ledger Entries"
 {
     layout
     {
+        addafter(Open)
+        {
+            field("Applies-to ID"; Rec."Applies-to ID")
+            {
+                ApplicationArea = All;
+                Width = 8;
+                Visible = false;
+            }
+        }
         addlast(Control1)
         {
             field(AppliedToCode; AppliedEntriesHelper.AppliedToCode(Rec."Entry No.", Rec.Open, Rec."Closed by Entry No."))

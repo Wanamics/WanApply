@@ -7,6 +7,11 @@ using Microsoft.Finance.ReceivablesPayables;
 using System.Security.User;
 report 87476 "Apply Applies-to ID/Cust.Inv."
 {
+    /*
+    To be run from BC URL +?Report=87476
+    Pour chaque **Ecriture client** de la sélection débritrice dont **ID lettrage** est non vide, 
+    recherche les écritures de même **ID lettrage** à lettrer, même partiellement.
+    */
     ApplicationArea = All;
     Caption = 'Apply Applies-to ID to Invoices';
     ToolTip = 'This report applies open customer ledger entries with an Applies-to ID to open customer invoices with the same Applies-to ID.';

@@ -1,19 +1,19 @@
-# Extension WanApply<!-- omit in toc -->
+# Extension WanApply
 
 Les anglophones *appliquent* (to Apply) des écritures les unes aux autres.  
-La traduction de Business Central a retenu **Lettrage** dont l'éthimologie est ici paradoxale (voir [Code lettrage... enfin - Wanamics](https://www.wanamics.fr/code-lettrage-enfin)).
+La traduction de Business Central a retenu **Lettrage** dont l'éthimologie est ici paradoxale (voir [Code lettrage... enfin | Wanamics](https://www.wanamics.fr/code-lettrage-enfin)).
 
 Cette extension complète les fonctions standards de lettrage des écritures clients, écritures fournisseurs et écritures salariés.
 
-![Lettrage](docs/assets/README.png)
+![Lettrage](images/WanApply.png)
 
-> Ce n’est que l’une des extensions gracieusement mises à votre disposition (voir [Extensions - Wanamics](https://www.wanamics.fr/extensions-business-central/Extensions)).  
-Vous pouvez donc en disposer librement dans le cadre de la licence open source qui vous est accordée (voir [Licence Open Source - Wanamics](https://www.wanamics.fr/licence-open-source/)).
+> Ce n’est que l’une des extensions gracieusement mises à votre disposition (voir [Extensions | Wanamics](https://www.wanamics.fr/extensions-business-central/Extensions)).  
+Vous pouvez donc en disposer librement dans le cadre de la licence open source qui vous est accordée (voir [Licence Open Source | Wanamics](https://www.wanamics.fr/licence-open-source/)).
 
 Voir aussi :
-* [Lettrage à posteriori - Wanamics](https://www.wanamics.fr/lettrage-a-posteriori/)
+* [Lettrage à posteriori | Wanamics](https://www.wanamics.fr/lettrage-a-posteriori/)
 
-* [Paiement à la commande et lettrage - Wanamics](https://www.wanamics.fr/paiement-a-la-commande-et-lettrage/)
+* [Paiement à la commande et lettrage | Wanamics](https://www.wanamics.fr/paiement-a-la-commande-et-lettrage/)
 
 ### Sommaire 
 - [Écritures comptables clients, fournisseurs et salariés](#écritures-comptables-clients-fournisseurs-et-salariés)
@@ -25,10 +25,9 @@ Voir aussi :
 - [Traitements Appliquer ID Lettrage...](#traitements-appliquer-id-lettrage)
 - [APIs](#apis)
   - [custAppliedLedgerEntries](#custappliedledgerentries)
-- [Outils d'administration](#outils-dadministration)
 
 ## Écritures comptables clients, fournisseurs et salariés
-* La colonne **Code lettrage** est ajoutée (voir [Code lettrage... enfin - Wanamics](https://www.wanamics.fr/code-lettrage-enfin))
+* La colonne **Code lettrage** est ajoutée (voir [Code lettrage... enfin | Wanamics](https://www.wanamics.fr/code-lettrage-enfin))
 
 ## Écritures comptables clients
 
@@ -68,7 +67,7 @@ Ce traitement peut concerner les clients, les fournisseurs ou les salariés.
 
 Si, au sein d'un même compte, le total du **Montant ouvert** des écritures de même **ID lettrage**, **Code devise** et **Groupe compta** est nul, elles sont lettrées entre elles.
 
-Ces traitements seront particulièrement utiles suite à une reprise de données (Voir [WanaStart - Wanamics](https://www.wanamics.fr/wanastart)).
+Ces traitements seront particulièrement utiles suite à une reprise de données (Voir [WanaStart | Wanamics](https://www.wanamics.fr/wanastart)).
 
 
 ## APIs
@@ -77,7 +76,7 @@ Pour mémoire, la syntaxe d'un endpoint est la suivante :
 {{apiRoute}}/{{tenantID}}/{{environment}}/api/{{apiPublisher}}/{{apiGroup}}/{{apiVersion}}/companies({{companyID}})/{entitySetName}
 ```
 ### custAppliedLedgerEntries
-Permet aux application tierces (ex : e-commerce, facturation extene...) d'être informé du règlement des factures.
+Permet aux applications tierces (ex : e-commerce, facturation extene...) d'être informé du règlement des factures.
 ``` 
     APIPublisher = 'Wanamics';
     APIGroup = 'wanApply';
@@ -86,6 +85,4 @@ Permet aux application tierces (ex : e-commerce, facturation extene...) d'être 
     EntityName = 'custAppliedLedgerEntry';
 ````
 
-## Outils d'administration
-* ?Report=87476 "Apply Applies-to ID/Cust.Inv."\
-Recherche pour chaque **Ecriture client** de la sélection débritrice dont **ID lettrage** est non vide, les écritures de même **ID lettrage** à lettrer, même partiellement.
+
