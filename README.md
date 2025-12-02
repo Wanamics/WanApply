@@ -23,6 +23,11 @@ Voir aussi :
 - [APIs](#apis)
   - [custAppliedLedgerEntries](#custappliedledgerentries)
 
+## Documents de vente
+
+* Le champ **ID lettrage** est ajouté à la commande et à la facture.\
+  Il permet par exemple d'indiquer le N° de commande (ou autre référence connue lors du paiement à la commande) pour lettrer la facture avec le paiement reçu à la commande (voir [Paiement à la commande et lettrage | Wanamics](https://www.wanamics.fr/paiement-a-la-commande-et-lettrage/)).
+
 ## Écritures comptables clients, fournisseurs et salariés
 * La colonne **Code lettrage** est ajoutée (voir [Code lettrage... enfin | Wanamics](https://www.wanamics.fr/code-lettrage-enfin))
 

@@ -3,7 +3,7 @@ namespace WanApply.WanApply;
 using Microsoft.Sales.Customer;
 using Microsoft.Finance.GeneralLedger.Account;
 
-tableextension 87470 "wan Customer Posting Group" extends "Customer Posting Group"
+tableextension 87470 "Customer Posting Group" extends "Customer Posting Group"
 {
     fields
     {

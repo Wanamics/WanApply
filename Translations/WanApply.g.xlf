@@ -318,35 +318,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Control AppliedToCode - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3274904948 - Control 228936420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2866362260">
+        <trans-unit id="PageExtension 4034894651 - Control 3093642907 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
+          <source>Specifies the ID of entries that will be applied to when you choose the Apply Entries action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice - Control Applies-to ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1673401186 - Control 3093642907 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Specifies the ID of entries that will be applied to when you choose the Apply Entries action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order - Control Applies-to ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2866362260 - Control 228936420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2866362260">
           <source>Specifies the value of the Close Entry Credit field.</source>
           <note from="Developer" annotates="general" priority="2">%</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension wan Customer Posting Groups - Control wan Close Entry Credit Acc. - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Posting Groups - Control wan Close Entry Credit Acc. - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3274904948 - Control 405089845 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2866362260">
+        <trans-unit id="PageExtension 2866362260 - Control 405089845 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2866362260">
           <source>Specifies the value of the Close Entry Debit Acc. field.</source>
           <note from="Developer" annotates="general" priority="2">%</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension wan Customer Posting Groups - Control wan Close Entry Debit Acc. - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Posting Groups - Control wan Close Entry Debit Acc. - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3377129821 - Field 228936420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+        <trans-unit id="TableExtension 410940989 - Field 228936420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
           <source>Specifies the general ledger account to use when you close an entry as lost.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Credit Acc. - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer Posting Group - Field wan Close Entry Credit Acc. - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3377129821 - Field 228936420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+        <trans-unit id="TableExtension 410940989 - Field 228936420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
           <source>Close Entry Credit</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Credit Acc. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer Posting Group - Field wan Close Entry Credit Acc. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3377129821 - Field 405089845 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+        <trans-unit id="TableExtension 410940989 - Field 405089845 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
           <source>Specifies the general ledger account to use when you close an entry as lost.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Debit Acc. - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer Posting Group - Field wan Close Entry Debit Acc. - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3377129821 - Field 405089845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
+        <trans-unit id="TableExtension 410940989 - Field 405089845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 410940989">
           <source>Close Entry Debit Acc.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension wan Customer Posting Group - Field wan Close Entry Debit Acc. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer Posting Group - Field wan Close Entry Debit Acc. - Property Caption</note>
         </trans-unit>
       </group>
     </body>

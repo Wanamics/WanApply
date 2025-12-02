@@ -2,7 +2,7 @@ namespace WanApply.WanApply;
 
 using Microsoft.Sales.Customer;
 
-pageextension 87473 "wan Customer Posting Groups" extends "Customer Posting Groups"
+pageextension 87473 "Customer Posting Groups" extends "Customer Posting Groups"
 {
     layout
     {
