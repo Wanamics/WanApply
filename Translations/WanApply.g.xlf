@@ -108,6 +108,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Customer Apply Applies-to ID - Control RequestAppliestoID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Query 1356461097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AppliesToCustLedgerEntries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query AppliesToCustLedgerEntries - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Query 2444234291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply Customer Applies-to ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
